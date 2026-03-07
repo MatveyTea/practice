@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mono-ART — черно-белое искусство</title>
+    <link rel="shortcut icon" href="img/general/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- ШАПКА -->
+    <header>
+        <nav>
+            <div class="header-logo">
+                <a href="#main" data-scroll-id="main" class="link"><img src="img/general/logo.png"></a>
+            </div>
+            <div class="header-desktop">
+                <a href="#about" data-scroll-id="about" class="link">Наши услуги</a>
+                <a href="#gallery" data-scroll-id="gallery" class="link">Галерея</a>
+                <a href="#price" data-scroll-id="price" class="link">Подписки</a>
+                <a href="#comments" data-scroll-id="comments" class="link">Отзывы</a>
+                <a href="#form" data-scroll-id="form" class="link">Связаться с нами</a>
+            </div>
+            <div class="header-mobile-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="header-mobile-content">
+                <a href="#about" data-scroll-id="about" class="link">Наши услуги</a>
+                <a href="#gallery" data-scroll-id="gallery" class="link">Галерея</a>
+                <a href="#price" data-scroll-id="price" class="link">Подписки</a>
+                <a href="#comments" data-scroll-id="comments" class="link">Отзывы</a>
+                <a href="#form" data-scroll-id="form" class="link">Связаться с нами</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- КОНТЕНТ -->
+    <main>
+        <!-- ГЛАВНАЯ -->
+        <section id="main" class="main">
+            <div class="main-container">
+                <p class="main-title">Создайте вечное искусство</p>
+                <p class="main-text">Запишитесь на фотосессию и окунитесь в искусство черно-белой фотографий!</p>
+                <button data-scroll-id="price" class="main-button black-button">Запечатлеть свой момент</button>
+            </div>
+            <div class="main-bg"></div>
+        </section>
+
+        <!-- НАШИ УСЛУГИ -->
+        <section id="about" class="about">
+            <div class="about-container">
+                <p class="about-title black-title">Наши услуги</p>
+                <div class="about-services">
+                    <div class="services-item">
+                        <p class="services-title">Портретная фотография</p>
+                        <p class="services-text">Запечатлейте свою уникальность через игру светотени и мастерство
+                            фотографа. Создаем атмосферу, в которой каждый нюанс вашей личности станет ярким элементом
+                            портрета.</p>
+                    </div>
+                    <div class="services-item">
+                        <p class="services-title">Творческие фотосессии</p>
+                        <p class="services-text">Воплощаем яркие идеи и нестандартные концепции, передающие настроение и
+                            характер проекта. Экспериментируйте с образами и стилями.</p>
+                    </div>
+                    <div class="services-item">
+                        <p class="services-title">Искусство и выставки</p>
+                        <p class="services-text">Помогаем подготовить работы для выставок, галерей и публикаций.
+                            Обеспечиваем профессиональную съемку, монтаж и редактирование.</p>
+                    </div>
+                    <div class="services-item">
+                        <p class="services-title">Редакционная съемка</p>
+                        <p class="services-text">Создаем качественный визуальный контент для журналистики, моды и
+                            рекламы, помогая привлекать внимание к вашему бренду.</p>
+                    </div>
+                    <div class="services-item">
+                        <p class="services-title">Бизнес-фотосъемка</p>
+                        <p class="services-text">Специализируемся на фото для рекламы, каталогов и соцсетей. Помогаем
+                            подчеркнуть преимущества вашего продукта и создать доверие у клиентов.</p>
+                    </div>
+                    <div class="services-item">
+                        <p class="services-title">Обучение</p>
+                        <p class="services-text">Предлагаем уроки для развития навыков фотографии, включая технику,
+                            композицию и работу со светом — чтоб ваши снимки были профессиональными.</p>
+                    </div>
+                </div>
+                <button data-scroll-id="price" class="about-button black-button">Посмотреть цены</button>
+            </div>
+        </section>
+
+        <!-- ГАЛЕРЕЯ -->
+        <section id="gallery" class="gallery">
+            <div class="gallery-container">
+                <p class="gallery-title black-title">Галерея</p>
+                <div class="gallery-works">
+                    <img src="img/gallery/work1.jpg">
+                    <img src="img/gallery/work2.jpg">
+                    <img src="img/gallery/work3.jpg">
+                    <img src="img/gallery/work4.jpg">
+                    <img src="img/gallery/work5.jpg">
+                    <img src="img/gallery/work6.jpg">
+                </div>
+                <img src="img/gallery/loader.png" class="gallery-loader">
+                <button class="gallery-button black-button">Загрузить больше</button>
+            </div>
+        </section>
+
+        <!-- ПОДПИСКИ -->
+        <section id="price" class="price">
+            <div class="price-container">
+                <p class="price-title black-title">Подписки</p>
+                <div class="price-item">
+                    <p class="price-item-title">Минимум — 500₽</p>
+                    <p class="price-item-text">Идеально для тех, кто хочет выразить эмоции в строгой монохромной гамме.
+                    </p>
+                    <ul class="price-item-list">
+                        <li>10 фотографий</li>
+                        <li>Обработка и коррекция цвета</li>
+                        <li>Лёгкий ретушь и редактирование</li>
+                        <li>Персональный менеджер</li>
+                        <li>Пересъемка по желанию</li>
+                        <li>Гибкая система оплаты</li>
+                    </ul>
+                    <button class="price-item-button black-button">Купить</button>
+                </div>
+                <div class="price-item">
+                    <p class="price-item-title">Стандарт — 1500₽</p>
+                    <p class="price-item-text">Лучший выбор для тех, кто ценит стиль и тонкую работу в монохроме.</p>
+                    <ul class="price-item-list">
+                        <li>25 фотографий</li>
+                        <li>Профессиональная ретушь</li>
+                        <li>Работа с светом и тенью</li>
+                        <li>Доставка в нескольких форматах</li>
+                        <li>Персональный фото-ассистент</li>
+                        <li>Гарантия исправлений</li>
+                    </ul>
+                    <button class="price-item-button black-button">Купить</button>
+                </div>
+                <div class="price-item">
+                    <p class="price-item-title">Премиум — 3000₽</p>
+                    <p class="price-item-text">Для избранных — эксклюзивные черно-белые снимки и индивидуальный подход.
+                    </p>
+                    <ul class="price-item-list">
+                        <li>100 фотографий</li>
+                        <li>Авторская ретушь и обработка</li>
+                        <li>Создание уникальных эффектов</li>
+                        <li>Эксклюзивные форматы</li>
+                        <li>Быстрая доставка</li>
+                        <li>Приоритетная поддержка</li>
+                    </ul>
+                    <button class="price-item-button black-button">Купить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ОТЗЫВЫ -->
+        <section id="comments" class="comments">
+            <div class="comments-container">
+                <p class="comments-title black-title">Отзывы</p>
+                <img class="comments-left disabled" src="img/comments/leftArrow.png">
+                <div class="comments-slider">
+                    <div class="comments-content">
+                        <span class="comments-item">
+                            <p class="comments-item-title">Искусство монохрома</p>
+                            <p class="comments-item-text">Наша команда специализируется на создании уникальных
+                                черно-белых фотографий, которые передают всю глубину эмоций, силу светотени и атмосферу
+                                любого момента. Мы верим, что в отсутствии цвета скрыты самые важные детали, и стремимся
+                                подчеркнуть их в каждом снимке, делая каждую фотографию настоящим произведением
+                                искусства.</p>
+                            <p class="comments-item-name">Иван Иванов, 15 января 2026</p>
+                        </span>
+                        <span class="comments-item">
+                            <p class="comments-item-title">Время в черно-белых тонах</p>
+                            <p class="comments-item-text">Черно-белая фотография — это не просто стиль, это особая
+                                техника запечатления мгновений, которая позволяет заглянуть в глубь человеческой души. В
+                                нашей работе мы сосредотачиваемся на деталях, текстуре и световых контрастах, чтобы
+                                каждая фотография рассказывала свою уникальную историю и вызывала искренние эмоции у
+                                зрителя.</p>
+                            <p class="comments-item-name">Анна Петрова, 3 января 2026</p>
+                        </span>
+                        <span class="comments-item">
+                            <p class="comments-item-title">Преобразить момент</p>
+                            <p class="comments-item-text">Каждая фотография — это не просто изображение, а запечатлённое
+                                настроение и состояние. Мы превращаем обычные мгновения в вечное искусство, используя
+                                тонкий баланс света и тени, чтобы подчеркнуть красоту не только внешнюю, но и
+                                внутреннюю. В результате наши работы — это изысканное сочетание классики и
+                                современности, создающие эмоциональную связь с аудиторией.</p>
+                            <p class="comments-item-name">Михаил Смирнов, 7 января 2026</p>
+                        </span>
+                        <span class="comments-item">
+                            <p class="comments-item-title">Истина в оттенках серого</p>
+                            <p class="comments-item-text">Черно-белая фотография — это способ увидеть по-другому,
+                                сосредоточиться на форме, структуре и игре света. Наши профессионалы умеют подчеркивать
+                                важные детали, создавая изображения, в которых каждый штрих и тень имеют значение. Мы
+                                ищем красоту там, где другие не обращают внимания, и превращаем простые моменты в
+                                шедевры.</p>
+                            <p class="comments-item-name">Елена Кузнецова, 10 января 2026</p>
+                        </span>
+                        <span class="comments-item">
+                            <p class="comments-item-title">Глубина и контраст</p>
+                            <p class="comments-item-text">Используя богатство оттенков и контрастов, мы создаем
+                                изображения, которые захватывают взгляд и оставляют долгое впечатление. Наша цель — не
+                                только запечатлеть момент, но и передать его насыщенность, ощущения и настроение, чтобы
+                                каждая фотография трогала за душу и вдохновляла на новые идеи и мысли.</p>
+                            <p class="comments-item-name">Андрей Васильев, 12 января 2026</p>
+                        </span>
+                        <span class="comments-item">
+                            <p class="comments-item-title">Истории в монохроме</p>
+                            <p class="comments-item-text">Черно-белое изображение — это мощный инструмент рассказа
+                                историй. Мы умеем находить неподдельную красоту даже в самых простых сценах, превращая
+                                их в духовное произведение, которое оставляет след в сердце зрителя. Наша команда
+                                создает не просто фотографии, а абсолютное и эмоциональное переживание.</p>
+                            <p class="comments-item-name">Мария Николаева, 5 января 2026</p>
+                        </span>
+                        <span class="comments-item">
+                            <p class="comments-item-title">Эстетика и смысл</p>
+                            <p class="comments-item-text">Работы нашей компании — это не только эстетика, но и глубокий
+                                смысл, который нам удается передать через каждый кадр. У нас есть особый взгляд на свет,
+                                тень и структуру, что позволяет создавать работы, вызывающие сильные чувства и
+                                заставляющие задуматься. Мы ищем красоту в простоте и силу в нюансах.</p>
+                            <p class="comments-item-name">Олег Дмитриев, 25 февраля 2026</p>
+                        </span>
+                    </div>
+                </div>
+                <img class="comments-right" src="img/comments/rightArrow.png">
+            </div>
+        </section>
+
+        <!-- ФОРМА -->
+        <section id="form" class="form">
+            <form action="/" method="post" class="form-container">
+                <legend class="form-title black-title">Остались вопросы?</legend>
+                <input class="form-input" type="email" name="email" placeholder="Введите почту" maxlength="100" required
+                    autocomplete="email">
+                <textarea class="form-input" name="question" placeholder="Напишите вопрос" maxlength="650"
+                    required></textarea>
+                <p class="form-text">Мы ответим на ваши вопросы по электронной почте в течение 48 часов.</p>
+                <input class="form-button black-button" type="submit" name="submit" value="Отправить">
+            </form>
+        </section>
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#main" class="link" data-scroll-id="main"><img src="img/general/logo.png"></a>
+                <a class="link" href="mailto:info@example.com">monoart@gmail.com</a>
+                <a class="link" href="tel:+74019876543">+7 (401) 987-65-43</a>
+                <a class="link" href="https://vk.com/monoart" target="_blank"><img src="img/footer/vk.png"></a>
+            </div>
+            <p class="footer-slogan">Mono-ART — превращаем каждый кадр в яркое искусство. Мы создаем чистые и насыщенные
+                фотографии, передающие ваши эмоции. Доверьтесь нам, и ваши моменты навсегда останутся яркими и
+                запоминающимися.</p>
+            <p class="footer-copyright">©Mono-ART, 2026 Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
