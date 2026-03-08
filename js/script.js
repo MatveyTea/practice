@@ -5,24 +5,33 @@ window.addEventListener("DOMContentLoaded", () => {
     setWidthComment();
 });
 
+// Настройки при изменение ширины и высоты экрана
+let widthScreen = document.body.offsetWidth;
+let heightScreen = document.body.offsetHeight;
+let timerResize = null;
 window.addEventListener("resize", () => {
-    setTimeout(function () {
+    if (widthScreen == document.body.offsetWidth && heightScreen == document.body.offsetHeight) return;
+    widthScreen = document.body.offsetWidth;
+    heightScreen = document.body.offsetHeight;
+    clearTimeout(timerResize);
+    timerResize = setTimeout(() => {
         setBurgerMenu();
         setWidthComment();
         rightArrow.click();
     }, 250);
 });
 
-// Переход к нужным элементов по шапке
+// Переход к нужным элементов в шапке
 const headerLinks = document.querySelectorAll("*[data-scroll-id]");
+const headerMobile = document.querySelector(".header-mobile-burger");
 headerLinks.forEach((link) => {
     const element = document.getElementById(link.dataset.scrollId);
     if (!element) return;
 
     link.addEventListener("click", (event) => {
         event.preventDefault();
-        if (window.screen.width <= 768 && link.tagName != "BUTTON") {
-            document.querySelector(".header-mobile-burger").click();
+        if (window.screen.width <= 768 && link.tagName != "BUTTON" || !link.firstElementChild && headerMobile.classList.contains("open")) {
+            headerMobile.click();
         }
         window.scrollTo({
             "behavior": "smooth",
@@ -31,10 +40,10 @@ headerLinks.forEach((link) => {
     });
 });
 
-// Эффектное появление элементов
+// Плавное появление элементов
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.intersectionRatio >= 0.3) {
+        if (entry.intersectionRatio >= 0.1) {
             let delay = 0.2;
             Array.from(entry.target.children[0].children).forEach((elem, index) => {
                 elem.classList.add("fade-in");
@@ -42,8 +51,8 @@ const observer = new IntersectionObserver((entries) => {
             });
         }
     });
-}, { threshold: [0, 0.3, 1] });
-const elements = document.querySelectorAll("[id]");
+}, { threshold: [0, 0.1, 1] });
+const elements = document.querySelectorAll("[id]:not(.form-input)");
 elements.forEach((element) => observer.observe(element));
 
 // Загрузка фотографий для галереи
@@ -53,7 +62,7 @@ const galleryLoaderText = document.createElement("p");
 galleryLoaderText.classList.add("gallery-loader-text", "fade-in");
 galleryLoaderText.textContent = "Представьте, что сюда что-то добавилось, потому что это лендинг без сервера, тут нет возможности что-либо загружать.";
 galleryButton.addEventListener("click", () => {
-    if (galleryButton.classList.contains("load")) return;
+    if (galleryLoader.classList.contains("load")) return;
     galleryLoader.classList.add("load");
     setTimeout(() => {
         galleryLoader.classList.remove("load");
@@ -113,13 +122,18 @@ function setBurgerMenu() {
         burger.classList.remove("open");
         content.style.display = "none";
     } else {
+        const vh = window.innerHeight - 100;
+        document.querySelector(".header-mobile-content").style.height = `${vh}px`;
+        document.querySelector(".main").style.height = `${vh}px`;
         burger.onclick = function () {
             burger.classList.toggle("open");
             if (burger.classList.contains("open")) {
                 content.style.display = "flex";
+                document.body.style.overflow = "hidden";
                 setTimeout(() => content.style.opacity = "1", 10);
             } else {
                 content.style.opacity = "0";
+                document.body.style.overflow = "unset";
                 setTimeout(() => content.style.display = "none", 300);
             }
         }
