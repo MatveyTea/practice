@@ -246,6 +246,7 @@ header nav {
 /* ГЛАВНАЯ */
 .main {
     width: 100%;
+    min-height: 400px;
     height: calc(100vh - 100px);
     max-height: 1920px;
     overflow: hidden;
@@ -701,7 +702,7 @@ textarea.form-input {
     .comments-left,
     .comments-right {
         order: 1;
-        width: 10%;
+        width: 12%;
     }
 
     /* ФОРМА */
@@ -719,7 +720,7 @@ textarea.form-input {
     }
 
     .footer-links .link {
-        width: 40%;
+        width: 50%;
     }
 }
 
@@ -751,7 +752,7 @@ textarea.form-input {
 
     /* ГАЛЕРЕЯ */
     .gallery-works {
-        gap: 10px;
+        gap: 15px;
     }
 
     .gallery-works img {
@@ -795,7 +796,7 @@ textarea.form-input {
     .comments-left,
     .comments-right {
         order: 1;
-        width: 15%;
+        width: 20%;
     }
 
     /* ФОРМА */

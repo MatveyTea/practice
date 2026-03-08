@@ -6,18 +6,17 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Настройки при изменение ширины и высоты экрана
-let widthScreen = document.body.offsetWidth;
-let heightScreen = document.body.offsetHeight;
+let widthScreen = document.body.clientWidth;
+let heightScreen = document.body.clientHeight;
 let timerResize = null;
 window.addEventListener("resize", () => {
-    if (widthScreen == document.body.offsetWidth && heightScreen == document.body.offsetHeight) return;
-    widthScreen = document.body.offsetWidth;
-    heightScreen = document.body.offsetHeight;
+    if (widthScreen == document.body.clientWidth && heightScreen == document.body.clientHeight) return;
+    widthScreen = document.body.clientWidth;
+    heightScreen = document.body.clientHeight;
     clearTimeout(timerResize);
     timerResize = setTimeout(() => {
         setBurgerMenu();
         setWidthComment();
-        rightArrow.click();
     }, 250);
 });
 
@@ -109,6 +108,7 @@ function setWidthComment() {
     step = width + 30;
     currentTranslate = 0;
     currentIndexComment = 0;
+    rightArrow.click();
     leftArrow.click();
     commentsContent.style.transform = `translateX(${currentTranslate}px)`;
     Array.from(commentsContent.children).forEach((comment) => comment.style.width = `${width}px`);
