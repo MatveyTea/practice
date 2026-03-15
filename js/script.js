@@ -6,17 +6,20 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Настройки при изменение ширины и высоты экрана
-let widthScreen = document.body.clientWidth;
-let heightScreen = document.body.clientHeight;
+let widthScreen = window.innerWidth;
+let heightScreen = window.innerHeight;
 let timerResize = null;
 window.addEventListener("resize", () => {
-    if (widthScreen == document.body.clientWidth && heightScreen == document.body.clientHeight) return;
-    widthScreen = document.body.clientWidth;
-    heightScreen = document.body.clientHeight;
     clearTimeout(timerResize);
     timerResize = setTimeout(() => {
-        setBurgerMenu();
-        setWidthComment();
+        if (heightScreen != window.innerHeight) {
+            setBurgerMenu();
+        }
+        if (widthScreen != window.innerWidth) {
+            setWidthComment();
+        }
+        widthScreen = window.innerWidth;
+        heightScreen = window.innerHeight;
     }, 250);
 });
 
@@ -29,7 +32,7 @@ headerLinks.forEach((link) => {
 
     link.addEventListener("click", (event) => {
         event.preventDefault();
-        if (window.screen.width <= 768 && link.tagName != "BUTTON" || !link.firstElementChild && headerMobile.classList.contains("open")) {
+        if (window.screen.width <= 768 && headerMobile.classList.contains("open")) {
             headerMobile.click();
         }
         window.scrollTo({
